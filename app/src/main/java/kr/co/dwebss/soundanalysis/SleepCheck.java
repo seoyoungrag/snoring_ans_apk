@@ -84,11 +84,12 @@ public class SleepCheck {
         //1분동안 소리가 발생하지 않았는지 체크한다.
         //0.01초 단위임으로, 6000번 해야 60초임.
         //1분이 되었으면, 데시벨보다 높은 소리가 발생하지 않은 경우
-        if(noiseChkForStartCnt>=200) {
+        if(noiseChkForStartCnt>=500) {
             int tmpN = noiseChkForStartSum;
             noiseChkForStartCnt = 0;
             noiseChkForStartSum = 0;
             noiseNoneChkForStartSum = 0;
+            Log.e("TEST","TEST");
             return tmpN;
         }else {
             //아직 1분이 안되었으면 계속 소리 체크를 한다.
